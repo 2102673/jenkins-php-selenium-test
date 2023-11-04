@@ -9,11 +9,17 @@ sleep 1
 # Change directory to the root
 cd /
 
-# Change permissions for /var, /var/www, and /var/www/html to full (read, write, execute)
-chmod -R 777 /var /var/www /var/www/html
+ls -l
 
-# Change directory back to /var/www/html
-cd /var/www/html
+cd var
+
+ls -l
+
+cd www
+
+ls -l
+
+cd html
 
 set +x
 
