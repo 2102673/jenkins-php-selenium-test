@@ -48,7 +48,6 @@ public class AppTest
 		driver.get(url);
 		//wait until page is loaded or timeout error
 		wait.until(ExpectedConditions.titleContains("Login Page |")); 
-		Thread.sleep(2000);
 		//enter input
 		driver.findElement(By.name("email")).sendKeys(validEmail);
 		driver.findElement(By.name("password")).sendKeys(validPassword);
@@ -71,7 +70,7 @@ public class AppTest
 		wait.until(ExpectedConditions.titleContains("Login Page |")); 
 
 		//enter input
-		driver.findElement(By.xpath("email")).sendKeys(validEmail);
+		driver.findElement(By.name("email")).sendKeys(validEmail);
 		driver.findElement(By.name("password")).sendKeys(invalidPassword);
 		//click submit
 		driver.findElement(By.name("submit")).submit();
