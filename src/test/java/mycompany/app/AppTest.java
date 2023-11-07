@@ -22,7 +22,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class AppTest
 {
 	WebDriver driver; 
-	WebDriverWait wait;
+	WebDriverWait wait; 
 	String url = "http://192.168.10.106/";
 	String validEmail = "user@example.com";
 	String validPassword = "password1234";
@@ -47,10 +47,10 @@ public class AppTest
 		//get web page
 		driver.get(url);
 		//wait until page is loaded or timeout error
-		wait.until(ExpectedConditions.titleContains("Login Page |"));
-		System.out.println(driver.getPageSource());
+		wait.until(ExpectedConditions.titleContains("Login Page |")); 
+
 		//enter input
-		driver.findElement(By.xpath("//*[@name='email']")).sendKeys(validEmail);
+		driver.findElement(By.name("email")).sendKeys(validEmail);
 		driver.findElement(By.name("password")).sendKeys(validPassword);
 		//click submit
 		driver.findElement(By.name("submit")).submit();
