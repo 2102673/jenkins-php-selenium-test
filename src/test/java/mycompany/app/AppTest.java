@@ -23,10 +23,7 @@ public class AppTest
 {
 	WebDriver driver; 
 	WebDriverWait wait;
-	Scanner scanner = new Scanner(System.in);
-	System.out.print("Enter your url: ");
-	String url = scanner.nextLine();
-	//String url = "http://172.30.139.41";
+	String url = "http://192.168.10.106";
 	String validEmail = "user@example.com";
 	String validPassword = "password1234";
 	String invalidEmail = "none@example.com";
