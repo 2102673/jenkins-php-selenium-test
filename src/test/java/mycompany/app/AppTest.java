@@ -48,7 +48,7 @@ public class AppTest
 		driver.get(url);
 		//wait until page is loaded or timeout error
 		wait.until(ExpectedConditions.titleContains("Login Page |"));
-
+		System.out.println(driver.getPageSource(););
 		//enter input
 		driver.findElement(By.name("email")).sendKeys(validEmail);
 		driver.findElement(By.name("password")).sendKeys(validPassword);
