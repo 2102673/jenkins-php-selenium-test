@@ -23,7 +23,7 @@ public class AppTest
 {
 	WebDriver driver; 
 	WebDriverWait wait; 
-	String url = "http://172.18.16.83";
+	String url = "http://172.18.16.83/";
 	String validEmail = "user@example.com";
 	String validPassword = "password1234";
 	String invalidEmail = "none@example.com";
@@ -31,7 +31,7 @@ public class AppTest
 
     @Before
     public void setUp() { 
-		driver = new ChromeDriver(); 
+		driver = new HtmlUnitDriver(); 
 		wait = new WebDriverWait(driver, 10); 
 	} 
 
